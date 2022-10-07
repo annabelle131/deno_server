@@ -1,3 +1,4 @@
+
 document.body.style.margin   = 0
 document.body.style.overflow = `hidden`
 
@@ -17,3 +18,6 @@ const y_pos = (cnv.height / 2) - (side / 2)
 
 ctx.fillStyle = `deeppink`
 ctx.fillRect (x_pos, y_pos, side, side)
+
+const socket = new WebSocket (`ws://localhost/`)
+socket.onopen = () => console.log (`client websocket opened!`)
